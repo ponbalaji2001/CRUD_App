@@ -4,7 +4,7 @@ from flask import render_template
 import urllib
 
 #Connect MongoDB
-con_string = "mongodb+srv://Ponbalaji:"+urllib.parse.quote( "Rambalaji@2001")+"@cluster0.qucqoh8.mongodb.net/?retryWrites=true&w=majority"
+con_string = os.getenv("MONGO_URI")
 client = pymongo.MongoClient(con_string)
 
 db = client.get_database('DemoDB')
