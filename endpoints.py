@@ -3,6 +3,8 @@ from flask import request
 from flask import render_template
 import urllib
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 #Connect MongoDB
 con_string = os.getenv("MONGO_URI")
